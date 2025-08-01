@@ -1,0 +1,31 @@
+{
+    "name": "Disable Automatic Gain Control",
+    "version": "1.2",
+    "description": "Disables the automatic microphone gain control enabled by web applications like Google Meet and Hangouts.",
+    "manifest_version": 3,
+    "background": {
+        "service_worker": "background.js"
+    },
+    "web_accessible_resources": [
+        {
+            "resources": ["disableAutogain.js"],
+            "matches": ["<all_urls>"]
+        }
+    ],
+    "action": {},
+    "icons": {
+        "16": "images/icon16.png",
+        "32": "images/icon32.png",
+        "48": "images/icon48.png",
+        "128": "images/icon128.png"
+    },
+    "permissions": [
+        "activeTab",
+        "contextMenus",
+        "scripting"
+    ],
+    "optional_host_permissions": [
+        "http://*/",
+        "https://*/"
+    ]
+}
